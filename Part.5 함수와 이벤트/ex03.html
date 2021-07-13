@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return문의 또 다른 용도</title>
+</head>
+<body>
+    <script>
+        function sum()
+        {
+            var sum = 0;
+            var cnt = 1;
+
+            // 무한루프 시작
+            while(true)
+            {
+                var num = parseInt(window.prompt("숫자 입력 : ", 1));
+                if (num == 0)
+                {
+                    document.write("함수를 종료합니다.");
+                    return; // 실행하려던 함수를 종료합니다.
+                }
+                sum += num;
+                document.write(cnt + ". " + sum + "<br/>");
+                cnt++;
+            }
+
+            document.write(cnt + "번 실행하였습니다.");
+        }
+        sum();
+    </script>
+</body>
+</html>
