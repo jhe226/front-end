@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수-5(리턴값으로 중첩함수 이용)</title>
+    <script>
+        function hi(){
+            // 중첩함수가 있는 상태
+            function hello(name){
+                document.write(name + "님 안녕하세요");
+            }
+            return hello;   // 리턴값으로 중첩 함수 넘김
+        }
+
+        // 함수를 변수에 저장한 것이 아니라,
+        // hi() 호출하고 그 리턴값으로 hello()를 받고 있음
+        var func = hi();    
+        func("홍길동"); // hello("홍길동"); 과 동일
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
